@@ -1,3 +1,12 @@
+//
+//  PathFinder.swift
+//  MatrixCalculation
+//
+//  Created by Ragunath Rajagopal on 21/02/17.
+//  Copyright © 2017 Ragunath Rajagopal. All rights reserved.
+//
+
+
 import Foundation
 
 /**
@@ -14,9 +23,9 @@ class PathFinder {
      * - returns: Tuple of (success, least path resistance, least path)
      */
     func find(_ grid: Array<Array<Int>>) -> (Bool, Int, Array<Int>) {
-//        if grid == [] {
-//            return (false, 0, [])
-//        }
+        if grid.count==0 {
+            return (false, 0, [])
+        }
         
         // Calculate the least path starting at each row and choose the
         // of the results.

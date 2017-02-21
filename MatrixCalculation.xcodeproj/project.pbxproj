@@ -14,6 +14,11 @@
 		FFB553BC1E5CA7BE00F19E85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB553BA1E5CA7BE00F19E85 /* LaunchScreen.storyboard */; };
 		FFB553C71E5CA7BF00F19E85 /* MatrixCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB553C61E5CA7BF00F19E85 /* MatrixCalculationTests.swift */; };
 		FFB553D21E5CA7BF00F19E85 /* MatrixCalculationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB553D11E5CA7BF00F19E85 /* MatrixCalculationUITests.swift */; };
+		FFB553E31E5CAB8C00F19E85 /* PathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB553E01E5CAB8C00F19E85 /* PathFinder.swift */; };
+		FFB553E41E5CAB8C00F19E85 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB553E11E5CAB8C00F19E85 /* Grid.swift */; };
+		FFB553E51E5CAB8C00F19E85 /* InputParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB553E21E5CAB8C00F19E85 /* InputParser.swift */; };
+		FFB553EC1E5CAEEF00F19E85 /* PathFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB553EB1E5CAEEF00F19E85 /* PathFinderTests.swift */; };
+		FFB553EE1E5CB06700F19E85 /* GridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB553ED1E5CB06700F19E85 /* GridTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		FFB553CD1E5CA7BF00F19E85 /* MatrixCalculationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatrixCalculationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB553D11E5CA7BF00F19E85 /* MatrixCalculationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixCalculationUITests.swift; sourceTree = "<group>"; };
 		FFB553D31E5CA7BF00F19E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFB553E01E5CAB8C00F19E85 /* PathFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathFinder.swift; sourceTree = "<group>"; };
+		FFB553E11E5CAB8C00F19E85 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		FFB553E21E5CAB8C00F19E85 /* InputParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputParser.swift; sourceTree = "<group>"; };
+		FFB553EB1E5CAEEF00F19E85 /* PathFinderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathFinderTests.swift; sourceTree = "<group>"; };
+		FFB553ED1E5CB06700F19E85 /* GridTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,8 @@
 		FFB553A51E5CA7BE00F19E85 = {
 			isa = PBXGroup;
 			children = (
+				FFB553E61E5CAE1400F19E85 /* Tests */,
+				FFB553DF1E5CAB7C00F19E85 /* Model */,
 				FFB553B01E5CA7BE00F19E85 /* MatrixCalculation */,
 				FFB553C51E5CA7BF00F19E85 /* MatrixCalculationTests */,
 				FFB553D01E5CA7BF00F19E85 /* MatrixCalculationUITests */,
@@ -123,6 +135,25 @@
 				FFB553D31E5CA7BF00F19E85 /* Info.plist */,
 			);
 			path = MatrixCalculationUITests;
+			sourceTree = "<group>";
+		};
+		FFB553DF1E5CAB7C00F19E85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFB553E01E5CAB8C00F19E85 /* PathFinder.swift */,
+				FFB553E11E5CAB8C00F19E85 /* Grid.swift */,
+				FFB553E21E5CAB8C00F19E85 /* InputParser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FFB553E61E5CAE1400F19E85 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FFB553EB1E5CAEEF00F19E85 /* PathFinderTests.swift */,
+				FFB553ED1E5CB06700F19E85 /* GridTests.swift */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +292,9 @@
 			files = (
 				FFB553B41E5CA7BE00F19E85 /* ViewController.swift in Sources */,
 				FFB553B21E5CA7BE00F19E85 /* AppDelegate.swift in Sources */,
+				FFB553E31E5CAB8C00F19E85 /* PathFinder.swift in Sources */,
+				FFB553E51E5CAB8C00F19E85 /* InputParser.swift in Sources */,
+				FFB553E41E5CAB8C00F19E85 /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB553EC1E5CAEEF00F19E85 /* PathFinderTests.swift in Sources */,
+				FFB553EE1E5CB06700F19E85 /* GridTests.swift in Sources */,
 				FFB553C71E5CA7BF00F19E85 /* MatrixCalculationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

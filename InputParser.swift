@@ -1,9 +1,9 @@
 //
 //  InputParser.swift
-//  PathOfLeastResistance
+//  MatrixCalculation
 //
-//  Created by Amanda Boder on 4/6/16.
-//  Copyright © 2016 Ryan Boder. All rights reserved.
+//  Created by Ragunath Rajagopal on 21/02/17.
+//  Copyright © 2017 Ragunath Rajagopal. All rights reserved.
 //
 
 import Foundation
