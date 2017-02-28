@@ -44,7 +44,7 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prR-eh-Qek">
-                                <rect key="frame" x="137" y="287" width="140" height="30"/>
+                                <rect key="frame" x="137" y="290" width="140" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="FvR-6r-hVL"/>
                                     <constraint firstAttribute="height" constant="30" id="kuI-Za-mQv"/>
@@ -55,14 +55,26 @@
                                     <action selector="actionCalculateWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBe-vh-aIa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*(All rows must have the same length)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lq-kJ-abW">
+                                <rect key="frame" x="167" y="266" width="227" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6e2-aS-Ec7"/>
+                                    <constraint firstAttribute="width" constant="227" id="JLa-18-XeX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.019607843140000001" green="0.2666666667" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rBa-78-1uy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1wZ-dL-gZG"/>
                             <constraint firstItem="prR-eh-Qek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LhS-ZH-AKZ"/>
                             <constraint firstItem="rBa-78-1uy" firstAttribute="top" secondItem="kBo-Iw-qas" secondAttribute="bottom" constant="9" id="Lqh-I5-8QA"/>
+                            <constraint firstItem="0Lq-kJ-abW" firstAttribute="top" secondItem="rBa-78-1uy" secondAttribute="bottom" id="Vxm-Sw-tvd"/>
+                            <constraint firstItem="0Lq-kJ-abW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cC9-cY-6KJ"/>
                             <constraint firstItem="kBo-Iw-qas" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ffB-JZ-6b3"/>
-                            <constraint firstItem="prR-eh-Qek" firstAttribute="top" secondItem="rBa-78-1uy" secondAttribute="bottom" constant="21" id="iLK-g1-Ihp"/>
+                            <constraint firstItem="prR-eh-Qek" firstAttribute="top" secondItem="rBa-78-1uy" secondAttribute="bottom" constant="24" id="iLK-g1-Ihp"/>
                             <constraint firstItem="rBa-78-1uy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ubo-Ax-YUA"/>
                             <constraint firstItem="kBo-Iw-qas" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wEb-Wa-Itb"/>
                             <constraint firstItem="rBa-78-1uy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zTw-kv-HPN"/>

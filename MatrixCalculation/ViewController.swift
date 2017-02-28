@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textViewNumber.text = " Eg Input:\n 1 2 3\n 2 4 5\n 4 5 2"
+        textViewNumber.textColor = UIColor.lightGray
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -26,6 +28,20 @@ class ViewController: UIViewController {
 
     // MARK: UITextView Delegate
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = " Eg Input:\n 1 2 3\n 2 4 5\n 4 5 2"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
         return true
@@ -34,11 +50,28 @@ class ViewController: UIViewController {
     // MARK: Button Action
     
     @IBAction func actionCalculate(sender: UIButton) {
-        let parser = InputParser()
-        let grid = parser.parse(textViewNumber.text)
-        let finder = PathFinder()
-        let result = finder.find(grid)
-        show(result)
+        
+        if !validateMatrix(number: textViewNumber.text) {
+            
+            let alert = UIAlertController(title: "Invalid matrix", message: "All rows must have the same length", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+            
+        } else {
+            
+            let parser = InputParser()
+            let grid = parser.parse(textViewNumber.text)
+            let finder = PathFinder()
+            let result = finder.find(grid)
+            show(result)
+        }
+        
+        
+        
     }
     
     // MARK: Custom  Action
@@ -77,6 +110,26 @@ class ViewController: UIViewController {
         // show the alert
         self.present(alert, animated: true, completion: nil)
     }
+    
+    // Validates the Input
+    
+    private func validateMatrix(number: String) -> Bool {
+        
+        var length: Int!
+        let numberofRows = number.components(separatedBy: "\n")
+        for row in numberofRows {
+            let items = row.components(separatedBy: " ")
+            
+            if length == nil {
+                length = items.count
+            }
+            if items.count != length {
+                return false
+            }
+        }
+        return length != nil
+    }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
        textViewNumber .resignFirstResponder()
